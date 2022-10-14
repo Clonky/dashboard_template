@@ -1,0 +1,159 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 200px 1fr;
+}
+
+nav {
+    grid-area: auto / 1;
+    background-color: #C9F0FF;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.dash-headline {
+    font-size: 1.5rem;
+    color: #6B5E62;
+}
+
+.dash-links {
+    color: #6B5E62;
+    display: flex;
+    text-align: end;
+}
+
+.separator {
+    margin-bottom: 2rem;
+}
+
+header {   
+    grid-area: 1 / 2;
+    background-color: #D5CAD6;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 8px rgba(200, 200, 200);
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: 250px 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.user-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+#searchQuery {
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    border: none;
+    min-width: 15rem;
+    margin-right: auto;
+}
+
+.button-container {
+    position: relative;
+    grid-area: 2 / 4;
+    align-items: baseline;
+}
+
+.button-container > button {
+    background-color: #6B5E62;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    margin: 0.5rem;
+    box-shadow: 5px 5px 3px #61565A;
+    min-width: 5rem;
+}
+
+.headline-search {
+    grid-area: 1 / 1;
+    margin-right: auto;
+}
+
+.greeting {
+    grid-area: 2 / 1;
+    display: flex;
+}
+
+.greeting-text {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting-text:first-child {
+    font-size: 1rem;
+}
+
+.greeting-text:last-child {
+    font-size: 1rem;
+}
+
+.user-headline {
+    grid-area: 1 / 4;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content {
+    background-color: #eafffd;
+    grid-area: 2 / 2;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    resize: both;
+}
+
+.article {
+    background-color: #EFEFF0;
+    box-sizing: border-box;
+    max-height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-template-rows: 1.5rem 1fr 30px;
+    column-gap: 1rem;
+    box-shadow: 5px 5px 3px #dddddd;
+}
+
+.article > aside {
+    grid-area: span 3 / 1;
+    background-color: #93BEDF;
+}
+
+.article > p {
+    grid-area: 2 / 2;
+    max-height: 75%;
+    overflow: hidden;
+    padding: 0.2rem;
+    margin: 0;
+}
+
+.article > h1 {
+    grid-area: 1 / 2;
+    padding: 0;
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    grid-area: 3 / 3;
+    gap: 0.2rem;
+}
